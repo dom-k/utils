@@ -26,6 +26,14 @@ Credit: https://superuser.com/questions/1310825/how-to-remove-old-version-of-ins
 
 A countdown timer in go lang.
 
+### Requirements
+
+Install this go package: [beeep](https://github.com/gen2brain/beeep)
+
+```sh
+go get github.com/gen2brain/beeep
+```
+
 ### Usage
 
 Set the countdown time to 10 minutes:
