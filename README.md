@@ -1,6 +1,6 @@
 # random-scripts
 
-Collection of random shell scripts 
+Collection of random scripts 
 
 ## .sqliterc
 
