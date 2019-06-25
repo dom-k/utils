@@ -28,8 +28,14 @@ A countdown timer in go lang.
 
 ### Usage
 
-Set the countdown time to 10 seconds:
+Set the countdown time to 10 minutes:
 
 ```go
-go run timer.go -deadline=10
+go run timer.go -minutes=10
+```
+
+Print help:
+
+```go
+go run timer.go --help
 ```
