@@ -9,7 +9,7 @@ import (
 
 func main() {
 	// Make use of command line arguments via flag package.
-	deadline := flag.Int("deadline", 0, "Deadline in minutes")
+	deadline := flag.Int("deadline", 0, "Deadline in seconds")
 	// Parse flags after defining them.
 	flag.Parse()
 	// Copy deadline value.
@@ -21,13 +21,13 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Print remaining minutes every second until deadline is reached.
+	// Print remaining seconds every second until deadline is reached.
 	for range time.Tick(1 * time.Second) {
 		if counter <= 0 {
 			fmt.Println("Beep. Time's up!")
 			break
 		}
 		counter--
-		fmt.Printf("Minutes left: %02d\n", counter)
+		fmt.Printf("Seconds left: %02d\n", counter)
 	}
 }
