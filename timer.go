@@ -22,7 +22,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Printf("Starting counter for %d Minutes . . .\n", *deadline)
+	fmt.Printf("Counter started for %d Minutes!\n", *deadline)
 
 	// Print remaining time every minute until deadline is reached.
 	for range time.Tick(1 * time.Second) {
