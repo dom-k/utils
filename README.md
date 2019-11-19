@@ -2,6 +2,14 @@
 
 Collection of random scripts 
 
+## pixel-i3-lock
+
+### Requirements
+
+```sh
+sudo apt install scrot
+```
+
 ## .sqliterc
 
 Just a SQLite configuration file. Add this to your home directory.
