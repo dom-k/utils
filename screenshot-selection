@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+DATETIME=$(date +%F_%T)
+
+# let scrot create the default file and then move it to $FILEPATH
+scrot -s ~/Pictures/screenshot-$DATETIME.png -e 'xclip -selection c -t image/png < $f && dunstify "Screenshot saved and copied to clipboard."'
+

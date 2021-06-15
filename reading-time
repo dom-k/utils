@@ -1,8 +1,14 @@
 #!/bin/bash
 TIME_PER_WORD=0.34
 
+# reading-time
+# 
+# Usage:
+# Just mark some text with the mouse (the text is copied to the clipboard)
+# then call this script.
+#
 # TODO: 
-# - Check if notification daemon is running.
+# - Check if notification daemon is running (dunst).
 # - Check if xclip is not empty.
 
 # Get highlighted text from clipboard.
@@ -19,9 +25,9 @@ if [ $reading_time -le 1 ]; then
 fi
 
 # Cut off text after 500 characters.
-notify-send "Text: '$(echo $highlighted_text | cut -c 1-500)'"
-notify-send "Words: $number_of_words words."
-notify-send "Reading time: $reading_time minute(s)."
+dunstify "Text: '$(echo $highlighted_text | cut -c 1-500)'"
+dunstify "Words: $number_of_words words."
+dunstify "Reading time: $reading_time minute(s)."
 
 exit 0
 
