@@ -3,5 +3,5 @@
 DATETIME=$(date +%F_%T)
 
 # let scrot create the default file and then move it to $FILEPATH
-scrot ~/Pictures/screenshot-$DATETIME.png -e "dunstify \"Screenshot saved to '~/Pictures/screenshot-$DATETIME.png\""
+scrot ~/Pictures/screenshot-$DATETIME.png -e "dunstify \"Screenshot saved to '~/Pictures/screenshot-$DATETIME.png\" -t 2000"
 
