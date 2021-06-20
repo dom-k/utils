@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+
+# Usage
+# 
+# countdown <num of seconds>
+# 
+# Examples
+#   countdown 60          – Countdown for one minute.
+#   countdown $((2*60*60))  – Countdown for two hours.
+#   countdown $((24*60*60))  – Countdown for a whole day.
+#
+# Source
+# https://superuser.com/questions/611538/is-there-a-way-to-display-a-countdown-or-stopwatch-timer-in-a-terminal#611582
+
+IMG_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )/assets/kuckucksuhr.jpg"
+
+targetDate=$((`date +%s` + $1));
+while [ "$targetDate" -ge `date +%s` ]; do
+  echo -ne "$(date -u --date @$(($targetDate - `date +%s`)) +%H:%M:%S)\r";
+  sleep 0.1 # to not spam the CPU.
+done
+dunstify -i $IMG_PATH "time expired!"
