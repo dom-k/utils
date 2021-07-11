@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+if [ "$#" -ne 1 ]; then
+  echo "Syntax: pomodoro <num of minutes>"
+  exit 1
+fi
+
+minutes=$1
+seconds=$(($minutes*60))
+
+sleep $seconds && dunstify -u 2 "Pomodoro is over, take a break!"
